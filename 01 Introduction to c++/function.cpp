@@ -32,4 +32,4 @@ int main(){
 }
 void myname(){
     cout<<"yash mishra"<<endl;
-}
+} 
