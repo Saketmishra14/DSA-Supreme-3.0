@@ -8,28 +8,25 @@ N = 4
 */
 #include<iostream>
 using namespace std;
-int main(){
+
+int main() {
     int n;
-    cout<<"enter n value -:";
-    cin>>n;
-    int i=1;
-    while(i<n){
-        int j = i,count = 2*n+1,gaps=(n-i-1),k=1;
-        while(k<gaps){
-            cout<<" ";
-            k = k + 1;
+    cout << "Enter n value: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        // Printing leading spaces
+        for(int j = 1; j <= n - i; j++) {
+            cout << " ";
         }
-        int m = 1,ch = count - 2*gaps;
-        while(m<ch){
-            cout<<"*";
-            m = m + 1;
+
+        // Printing stars
+        for(int j = 1; j <= 2 * i - 1; j++) {
+            cout << "*";
         }
-        k = 1;
-        while(k<gaps){
-            cout<<" ";
-            k = k + 1;
-        }
-        cout<<"\n";
-        i = i + 1;
+
+        cout << endl; // Move to next line
     }
+
+    return 0;
 }
