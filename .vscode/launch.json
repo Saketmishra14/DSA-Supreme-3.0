@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/DSA-Supreme-3.0/03 Basics of Programming-level-2/Week-2 assignment",
-      "program": "/workspaces/DSA-Supreme-3.0/03 Basics of Programming-level-2/Week-2 assignment/build/Debug/outDebug",
+      "cwd": "/workspaces/DSA-Supreme-3.0/04 Arrays, Time complexity and Space complexity/let's learn array",
+      "program": "/workspaces/DSA-Supreme-3.0/04 Arrays, Time complexity and Space complexity/let's learn array/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
