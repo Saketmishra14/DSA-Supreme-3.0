@@ -10,7 +10,7 @@ int findUniqueNumber(int arr[], int n){
     return ans;
 }
 int main(){
-    int arr[]={2,4,1,4,1};
+    int arr[]={8,4,1,4,1};
     int size=5;
     int ans= findUniqueNumber(arr,size);
     cout<<"Unique Number is: "<< ans << endl;

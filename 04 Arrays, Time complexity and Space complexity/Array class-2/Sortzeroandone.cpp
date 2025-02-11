@@ -21,6 +21,10 @@ void printZeroesAndOnes(int arr[],int size){
     {
     arr[i]=1;
     }
+
+      //method-2
+    // fill(arr,arr+ zeroCount,0);
+    // fill(arr+zeroCount,arr+n,1);
     
     
 }
