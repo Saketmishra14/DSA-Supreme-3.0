@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
-void uppertraingle(int arr[],int n){
+void lowertraingle(int arr[],int n){
     for (int i = 0; i < n; i++)
     {
-        for (int j = i; j <n; j++)
+        for (int j = n-i-1; j >=0; j--)
         {
           cout<<arr[i]<<","<<arr[j]<<" ";
         }
@@ -15,6 +15,6 @@ void uppertraingle(int arr[],int n){
 int main(){
     int arr[]={10,20,30,40};
     int size=4;
-    uppertraingle(arr,size);
+    lowertraingle(arr,size);
     return 0;
-} 
+}
