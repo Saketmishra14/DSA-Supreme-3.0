@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//when ever time-complexity is give o(log n) use binary search 
 int binarysearch(int arr[],int n,int target){
     int s=0;
     int e=n-1;
