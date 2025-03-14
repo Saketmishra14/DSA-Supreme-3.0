@@ -22,3 +22,7 @@ class Solution
             return ans % M;
 		}
 };
+int main(){
+    
+    return 0;
+}
