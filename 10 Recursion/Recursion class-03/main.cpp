@@ -20,12 +20,33 @@ bool CheckSorted(int arr[],int size,int index){
     //     return false;
     // }
 }
+
+void printSubsequences(string str, int i, string output){
+    //base case
+    if(i == str.length()) {
+        cout << output << endl;
+        return;
+    }
+    //recursive call
+    char ch = str[i];
+    //include ch
+    printSubsequences(str,i+1,output + ch);
+    //exclude ch
+    printSubsequences(str,i+1,output);
+}
+
 int main(){
     int arr[]={10,20,30,40,45,50};
     int size=sizeof(arr)/sizeof(arr[0]);
     int index=0;
     int result=CheckSorted(arr,size,index);
     cout<<"array is sorted or not -:"<<result;
+
+    string str="abc";
+    string output="";
+    printSubsequences(str,index,output);
+
+
 
     return 0;
 }
