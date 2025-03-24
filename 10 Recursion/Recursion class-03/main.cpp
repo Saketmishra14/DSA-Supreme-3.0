@@ -40,7 +40,7 @@ int main(){
     int size=sizeof(arr)/sizeof(arr[0]);
     int index=0;
     int result=CheckSorted(arr,size,index);
-    cout<<"array is sorted or not -:"<<result;
+    cout<<"array is sorted or not -:"<<result<<endl;
 
     string str="abc";
     string output="";
