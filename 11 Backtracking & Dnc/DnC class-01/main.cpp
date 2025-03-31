@@ -113,8 +113,8 @@ int main(){
 //     vector<int> ans;
 //     mergesortedarray(arr,arrsize,brr,brrsize,ans);
 //     for(int num: ans){
-    //     cout<<num<<" ";
-    // }  
+   //     cout<<num<<" ";
+   // }  
 
     int arr[] = {10,80,110,90,50,30,40,20};
     int size = 8;
