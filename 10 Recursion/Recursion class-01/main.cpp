@@ -2,9 +2,9 @@
 using namespace std;
 int getfactorial(int n){
     if(n==0 || n==1)
-        return 1;
-     
-     return n* getfactorial(n-1);
+    return n;
+   int ans=n*getfactorial(n-1);
+   return ans;
 }
 
 //print counting from N to 1

@@ -3,21 +3,29 @@ using namespace std;
 
 //print an array using recursion
 void PrintArray(int arr[],int size,int index){
-    if(index==size){
-        return ;
-    }
-    cout<<arr[index]<<" ";
-    PrintArray(arr,size,index+1);
+  //base case
+  if(index>=size){
+    return;
+  }
+  //processing
+  cout<<arr[index]<<" ";
+  //recursive call
+  PrintArray(arr,size,index+1); 
+  
 }
 
 //seraching value using recursion
 bool Findtarget(int arr[],int size,int target,int index){
+    //base case 
     if(index>=size){
+        //processing
         return false;
     }
     if(arr[index]==target){
+        //processing
         return true;
     }
+    //recursive call
      return Findtarget(arr,size,target,index+1);
 }
 
@@ -39,20 +47,24 @@ void Minvalue(int arr[],int size,int index, int &mini){
     if(index==size){
         return ;
     }
-    //recursive relation
+     //processing
     mini=min(mini,arr[index]);
+     //recursive relation
     Minvalue(arr,size,index+1,mini);
-    //processing
+   
 }
 
 //print odds number in an array 
 void PrintallOdds(int arr[],int size,int index){
+    //base case
     if(index==size){
         return ;
 
     }
+    //processing
     if(arr[index] & 1)
     cout<<arr[index]<<" ";
+     //recursive relation
     PrintallOdds(arr,size,index+1);
 }
 
