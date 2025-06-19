@@ -24,7 +24,7 @@ int main(){
     int index=0;
 
     int result=Solve(nums,size,index);
-    cout<<"the maximum amout is house robber is -:"<<result<<endl;
+    cout<<"the maximum amount house robber get is -:"<<result<<endl;
    
 
     
