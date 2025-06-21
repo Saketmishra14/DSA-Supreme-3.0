@@ -39,16 +39,16 @@ void merge(int arr[],int s,int e,int mid){
     int *leftarr=new int[leftlength];
     int *rightarr=new int[rightlength];
 
-    //fill and copy the left and right array
+    //fill and copy the left and right arrays
     //copy orginal array value
     //initialize orginal array index
     int index=s;
-    //copy left side array
+    //copy value in left side array
     for(int i=0;i<leftlength;i++){
         leftarr[i]=arr[index];
         index++;
     }
-    //copy right side array
+    //copy value in  right side array
     for(int i=0;i<rightlength;i++){
         rightarr[i]=arr[index];
         index++;
@@ -70,7 +70,7 @@ void merge(int arr[],int s,int e,int mid){
             mainarrayindex++;
         }
     }
-    //handle 2 cases discussed above in merge 2sorted arrays question
+    //i have to handle 2 cases discussed above in merge 2 sorted arrays wla question
     while(i<leftlength){
         arr[mainarrayindex]=leftarr[i];
             i++;
@@ -116,8 +116,8 @@ int main(){
    //     cout<<num<<" ";
    // }  
 
-    int arr[] = {10,80,110,90,50,30,40,20};
-    int size = 8;
+    int arr[] = {0,10,80,110,90,50,30,40,200,0};
+    int size = 10;
     int s=0;
     int e=size-1;
     mergesort(arr,s,e);
