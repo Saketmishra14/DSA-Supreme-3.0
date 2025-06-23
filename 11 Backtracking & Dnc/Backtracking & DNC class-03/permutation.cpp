@@ -14,6 +14,8 @@ void Printpermutation(string str,int i){
         swap(str[i],str[j]);
 
         Printpermutation(str,i+1);
+        //BACKTRACK
+        swap(str[i],str[j]);
     }
 
 }
