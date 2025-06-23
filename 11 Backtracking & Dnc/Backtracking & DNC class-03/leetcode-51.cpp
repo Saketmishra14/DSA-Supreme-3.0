@@ -64,17 +64,13 @@ void solve(int n, vector<vector<char> >&board, vector<vector<string>>&ans,int co
      }
 }
 
-}
-
  vector<vector<string>> solveNQueens(int n) {
     vector<vector<string>> ans;
     //board
         vector<vector<char> > board(n, vector<char>(n, '.'));
         //start placing queen with 0th column
         int col=0;
-        solve(n,board,ans,col);
+       solve(n,board,ans,col);
         return ans;
-        for(auto i:ans){
-            cout<<i<<endl;
-        }
  }
+};
