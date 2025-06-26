@@ -12,6 +12,7 @@ class Node{
         next=NULL;
     }
 };
+
 void insertattail(int value,Node* &head,Node*&tail){
     if(head==NULL && tail==NULL){
         Node* newnode=new Node(value);
@@ -43,24 +44,7 @@ void insertathead(int value,Node* &head,Node* &tail){
         head=newnode;
     }
 }
-void print(Node* head){
-    Node* temp=head;
-    while(temp!=NULL){
-        cout<<temp->data<<"->";
-        temp=temp->next;
-    }
-    cout<<"NULL"<<endl;
-}
-void Reverseprint(Node* tail){
-    Node* temp=tail;
-    while(temp!=NULL){
-        cout<<temp->data<<"->";
-        temp=temp->prev;
-    }
-    cout<<"NULL"<<endl;
-
-}
-int getlength(Node* head){
+int getlength(Node* &head){
     Node* temp=head;
     int count=0;
     while(temp!=0){
@@ -68,6 +52,14 @@ int getlength(Node* head){
         temp=temp->next;
     }
     return count;
+}
+void print(Node* head){
+    Node* temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<"->";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
 }
 void insertatposition(int position,int value,Node* &head,Node* &tail){
     if(position==1){
@@ -89,24 +81,51 @@ void insertatposition(int position,int value,Node* &head,Node* &tail){
         forward->prev=newnode;
         newnode->next=forward;
     }
-
 }
- bool searching (int target,Node* &head,Node* &tail){
-    Node* temp=head;
-    for(int i=0;i<getlength(head);i++){
-        if(target==temp->data){
-            cout<<target<<" found at index "<<i+1;
-            return true;
-        }
-        else{
+//deletion operation perform
+void deleteatposition(int position,Node* &head,Node* &tail){
+    //if linked list have no data
+    int len=getlength(head);
+    if(head==NULL && tail==NULL){
+        cout<<"No node to delete"<<endl;
+        return ;
+    }
+    //if linked list have one node
+    if(head==tail){
+        Node* temp=head;
+        head=NULL;
+        tail=NULL;
+        delete temp;
+    }
+    else if(len==position){
+        Node* temp=tail;
+        tail=tail->prev;
+        tail->next=NULL;
+        temp->prev=NULL;
+        delete temp;
+
+    }
+    else{
+        //delete node other than head
+        Node* temp=head;
+        for(int i=0;i<position-2;i++){
             temp=temp->next;
         }
-    }
-    return false;
+        Node* backward=temp;
+        Node* curr=backward->next;
+        Node* forward=curr->next;
+        backward->next=forward;
+        forward->prev=backward;
+        curr->prev=NULL;
+        curr->next=NULL;
+        delete curr;
 
- }
+    }
+
+
+}
 int main(){
-    Node* head=NULL;
+      Node* head=NULL;
     Node* tail=NULL;
     insertathead(10,head,tail);
     insertathead(20,head,tail);
@@ -116,9 +135,8 @@ int main(){
 
     insertatposition(6,0,head,tail);
     print(head);
-    searching(0,head,tail);
-    //Reverseprint(tail);
-    int length=getlength(head);
-   // cout<<length;
+    deleteatposition(2,head,tail);
+    print(head);
+
     return 0;
 }
