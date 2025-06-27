@@ -21,9 +21,7 @@ public:
             else{
                 m[temp]=true;
          temp=temp->next;
-            }
-             
-
+            }          
         }
         return false;
         
