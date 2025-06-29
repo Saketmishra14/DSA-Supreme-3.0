@@ -1,7 +1,7 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 // gfg: sort 0s, 1s and 2s in LL
-
 class Solution
 {
     public:
@@ -73,3 +73,6 @@ class Solution
 
     }
 };
+int main(){
+    return 0;
+}
