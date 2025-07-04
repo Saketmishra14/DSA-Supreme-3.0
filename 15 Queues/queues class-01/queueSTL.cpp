@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     queue<int> q;
-    //insertion
+    //Insertion
     q.push(10);
     q.push(20);
     q.push(30);
@@ -35,6 +35,13 @@ int main(){
     dq.push_back(4);
     cout<<dq.front()<<endl;
     cout<<dq.back()<<endl;
+   cout<< dq.size()<<endl;
+   dq.pop_back();
 
+   //printing
+   while(!q.empty()){
+    cout<<q.front()<<"  "<<endl;
+    q.pop();
+   }
     return 0;
 }
