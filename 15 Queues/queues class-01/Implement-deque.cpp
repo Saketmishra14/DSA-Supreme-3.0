@@ -62,11 +62,14 @@ class Deque{
         }
         //when one element is present
         else if(front==rear){
+            arr[rear]=0;
             front=-1;
             rear=-1;
+            
         }
         //normal pop
         else{
+            arr[rear]=0;
             rear--;
         }
     }
@@ -102,6 +105,17 @@ int main(){
     dq.push_front(25);
    dq.push_rear(30);
     dq.print();
+    dq.pop_rear();
+    dq.print();
+    dq.pop_rear();
+    dq.print();
+     dq.pop_rear();
+    dq.print();
+     dq.pop_rear();
+    dq.print();
+     dq.pop_rear();
+    dq.print();
+
    
   
      
