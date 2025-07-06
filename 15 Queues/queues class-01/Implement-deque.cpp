@@ -62,14 +62,14 @@ class Deque{
         }
         //when one element is present
         else if(front==rear){
-            arr[rear]=0;
+            arr[rear]=-1;
             front=-1;
             rear=-1;
             
         }
         //normal pop
         else{
-            arr[rear]=0;
+            arr[rear]=-1;
             rear--;
         }
     }
@@ -79,10 +79,12 @@ class Deque{
             return ;
         }
         else if(front==rear){
+            arr[front]=-1;
             front=-1;
             rear=-1;
         }
         else{
+            arr[front]=-1;
             front++;
         }
 
