@@ -9,7 +9,7 @@ using namespace std;
 vector<long long> printFirstNegativeInteger(long long int A[],long long int N, long long int k) {
     deque<long long int>q;
     vector<long long> ans;
-    // store index inside queue, becoz it will tell ki current element current window me hai ya nhi
+    // store index inside queue, because it will tell ki current element current window me hai ya nhi
     // STEP 1: process first window
     // storing indexes of all the -ve numbers inside the first window
     for(int i = 0; i < k; i++){
