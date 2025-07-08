@@ -20,6 +20,7 @@ class Node{
 
         if(value==-1) return NULL;
         else{
+            //root node
             Node* root=new Node(value);
 
             //left root recursive call
