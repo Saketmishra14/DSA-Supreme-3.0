@@ -27,12 +27,12 @@ int main(){
   //min heap
   priority_queue<int, vector<int>,greater<int>> minimumheap;
   minimumheap.push(20);
-
-
-
-
-    
-
-
+  minimumheap.push(30);
+  minimumheap.push(10);
+  minimumheap.push(22);
+  minimumheap.push(3);
+  minimumheap.push(1);
+  cout<<minimumheap.top()<<endl;
+  cout<<minimumheap.size()<<endl;
     return 0;
 }
