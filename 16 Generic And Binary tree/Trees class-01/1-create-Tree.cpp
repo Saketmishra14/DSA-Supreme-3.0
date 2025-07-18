@@ -61,7 +61,6 @@ class Node{
     }
     void PostOrder(Node* root){
         if(root==NULL) return ;
-
         //LRN
         //L
          PreOrder(root->left);
