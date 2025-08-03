@@ -12,12 +12,8 @@ bool findtarget(int arr[],int size,int target){
        }
        
     }
-
     //element not found condition hits 
     return false;
-    
-
-
 }
 int main(){
     int arr[]={10,20,30,40,50,60};
